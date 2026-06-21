@@ -1,3 +1,10 @@
-theme: jekyll-theme-minimal
-title: Faryz-Coder homepage
-description: Testing only!
+# Site settings
+title: "FlowAudio - Auto Volume"
+description: "Privacy Policy and Terms of Service"
+
+# Build settings
+theme: jekyll-theme-cayman # Or jekyll-theme-minima
+
+# Plugins
+plugins:
+  - jekyll-optional-front-matter
