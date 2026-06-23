@@ -174,19 +174,13 @@
     border: 1px solid rgba(255,255,255,0.07); border-radius: 28px;
     padding: 54px 44px; display: flex; align-items: center; gap: 44px; flex-wrap: wrap;
   }
+  .band .watches { flex: 0 0 auto; display: flex; gap: 18px; margin: 0 auto; }
   .band .watch {
-    flex: 0 0 150px; height: 150px; border-radius: 38px;
-    background: #05050a; border: 6px solid #1f1f2b; position: relative;
-    box-shadow: 0 0 50px rgba(191,46,240,0.25); margin: 0 auto;
+    width: 150px; height: 150px; border-radius: 50%;
+    background: #000; border: 5px solid #1f1f2b; overflow: hidden;
+    box-shadow: 0 0 50px rgba(191,46,240,0.22);
   }
-  .band .watch::after {
-    content: "STOP"; position: absolute; inset: 0; display: grid; place-items: center;
-    color: var(--red); font-weight: 800; font-size: 0.95rem; letter-spacing: 1px;
-  }
-  .band .watch .ring {
-    position: absolute; inset: 14px; border-radius: 50%;
-    border: 3px solid var(--green); opacity: 0.5;
-  }
+  .band .watch img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .band-text { flex: 1; min-width: 260px; }
   .band-text h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; }
   .band-text p { color: rgba(255,255,255,0.65); }
@@ -220,6 +214,9 @@
     .tier .kmh { font-size: 0.95rem; }
     .tier .lbl { display: none; }
     .nav-cta { display: none; }
+    .band { padding: 38px 24px; }
+    .band .watches { gap: 12px; }
+    .band .watch { width: 130px; height: 130px; }
   }
 </style>
 </head>
@@ -342,7 +339,10 @@
     <section>
       <div class="wrap">
         <div class="band">
-          <div class="watch"><div class="ring"></div></div>
+          <div class="watches">
+            <div class="watch"><img src="watch-tiers.png" alt="FlowAudio on Wear OS showing speed tiers and volumes" /></div>
+            <div class="watch"><img src="watch-stop.png" alt="FlowAudio on Wear OS showing sensitivity and the STOP button" /></div>
+          </div>
           <div class="band-text">
             <h2>Control it from your wrist</h2>
             <p>The Wear OS companion mirrors your phone: adjust each tier's volume, change sensitivity, see whether the service is active, and stop it instantly — all without taking your hands off the wheel for longer than a glance.</p>
